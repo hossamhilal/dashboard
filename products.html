@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/icofont.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="css/style.css">
+    
+        <link rel="icon" href="images/log-logo.png" type="image/x-icon" />
+        <title> Dashboard </title>
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="loader-box">  </div>
+    </div>
+
+    <div class="main-content">
+
+        <!--  MAIN HEADER -->
+        <header class="dashboard-header internal-header">
+            <div class="container-fluid">
+                <div class="top-header">
+                    <ul>
+                        <li>
+                            <div class="user-pic">
+                                <img src="images/user.png"  class="img-fluid">
+                            </div>
+                        </li>
+                        <li>
+                            <a href="profile.html"> <img src="images/setting-icon.png" alt="icon" class="img-fluid"> </a>
+                        </li>
+                        <li>
+                            <a href="orders.html">
+                                <img src="images/notification-icon.png" alt="icon" class="img-fluid">
+                                <div class="notifi-circle">
+                                    <span class="circle"></span>
+                                    <span class="bordr"></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="internal-bottom">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box first">
+                                <div class="pic">
+                                    <img src="images/internal-cart-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات الواردة </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box second">
+                                <div class="pic">
+                                    <img src="images/internal-delivery-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات النشطة </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box third">
+                                <div class="pic">
+                                    <img src="images/internal-finished-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات المنتهيه </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENT  -->
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <div class="basic-filter">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="box">
+                                <label class="checkbox-container"> تحديد الكل :  
+                                    <input type="checkbox" class="check_all">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <select>
+                                    <option value="0"> حذف </option>
+                                    <option value="1"> حذف </option>
+                                    <option value="2"> حذف </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <form action="">
+                                <div class="search-box">
+                                    <div class="field">
+                                        <input type="text" id="serach-input"  class="form-control">
+                                        <label for="serach-input">  كلمة البحث  </label>
+                                    </div>
+                                    <button type="submit" class="search-btn"> <i class="icofont-search-1"></i>  </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="sort-box">
+                                <div class="add-btnbox">
+                                    <button class="btn btn-full" data-toggle="modal" data-target="#add-prod-modal"> <span> <i class="icofont-plus"></i> </span> </button>
+                                </div>
+                                <div class="box">
+                                    <img src="images/sort-icon.png" alt="sort" class="img-fluid">
+                                    <span> صنف حسب : </span>
+                                    <select>
+                                        <option value="0"> الوقت </option>
+                                        <option value="1"> السعر </option>
+                                        <option value="2"> الاحدث </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basic-table">
+                    <table class="table table-bordered products-table">
+                        <thead>
+                            <tr>
+                                <th scope="col"> </th>
+                                <th scope="col"> رقم </th>
+                                <th scope="col"> الصورة </th>
+                                <th scope="col"> اسم المنتج </th>
+                                <th scope="col"> السعر </th>
+                                <th scope="col"> الخصم </th>
+                                <th scope="col"> المنيو </th>
+                                <th scope="col"> تعديل </th>
+                                <th scope="col"> حذف </th>
+                                <th scope="col"> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th> 
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                </th>
+                                <td> <span class="number"> 1</span> </td>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 100 ريال  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                                <td> <div class="menue-name">  <p> اسم المنيو  </p> </div> </td>
+                                <td> <a href="" class="btn edit"> تعديل  </a></td>
+                                <td> <a href="" class="btn delete"> حذف  </a></td>
+                                <th> 
+                                    <a href="" class="more dropdown-toggle" id="moreButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="images/more.png" alt="img">  
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="moreButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> 
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                </th>
+                                <td> <span class="number"> 1</span> </td>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 100 ريال  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                                <td> <div class="menue-name">  <p> اسم المنيو  </p> </div> </td>
+                                <td> <a href="" class="btn edit"> تعديل  </a></td>
+                                <td> <a href="" class="btn delete"> حذف  </a></td>
+                                <th> 
+                                    <a href="" class="more dropdown-toggle" id="moreButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="images/more.png" alt="img">  
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="moreButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> 
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                </th>
+                                <td> <span class="number"> 1</span> </td>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 100 ريال  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                                <td> <div class="menue-name">  <p> اسم المنيو  </p> </div> </td>
+                                <td> <a href="" class="btn edit"> تعديل  </a></td>
+                                <td> <a href="" class="btn delete"> حذف  </a></td>
+                                <th> 
+                                    <a href="" class="more dropdown-toggle" id="moreButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="images/more.png" alt="img">  
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="moreButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> 
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                </th>
+                                <td> <span class="number"> 1</span> </td>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 100 ريال  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                                <td> <div class="menue-name">  <p> اسم المنيو  </p> </div> </td>
+                                <td> <a href="" class="btn edit"> تعديل  </a></td>
+                                <td> <a href="" class="btn delete"> حذف  </a></td>
+                                <th> 
+                                    <a href="" class="more dropdown-toggle" id="moreButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="images/more.png" alt="img">  
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="moreButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> 
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                </th>
+                                <td> <span class="number"> 1</span> </td>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 100 ريال  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                                <td> <div class="menue-name">  <p> اسم المنيو  </p> </div> </td>
+                                <td> <a href="" class="btn edit"> تعديل  </a></td>
+                                <td> <a href="" class="btn delete"> حذف  </a></td>
+                                <th> 
+                                    <a href="" class="more dropdown-toggle" id="moreButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="images/more.png" alt="img">  
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="moreButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> 
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                </th>
+                                <td> <span class="number"> 1</span> </td>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 100 ريال  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                                <td> <div class="menue-name">  <p> اسم المنيو  </p> </div> </td>
+                                <td> <a href="" class="btn edit"> تعديل  </a></td>
+                                <td> <a href="" class="btn delete"> حذف  </a></td>
+                                <th> 
+                                    <a href="" class="more dropdown-toggle" id="moreButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="images/more.png" alt="img">  
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="moreButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> 
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                </th>
+                                <td> <span class="number"> 1</span> </td>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 100 ريال  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                                <td> <div class="menue-name">  <p> اسم المنيو  </p> </div> </td>
+                                <td> <a href="" class="btn edit"> تعديل  </a></td>
+                                <td> <a href="" class="btn delete"> حذف  </a></td>
+                                <th> 
+                                    <a href="" class="more dropdown-toggle" id="moreButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="images/more.png" alt="img">  
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="moreButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+                <div class="pagination-box">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">  <a class="page-link" href="#"> <i class="icofont-thin-right"></i> </a>  </li>
+                            <li class="page-item">  <a class="page-link active" href="#"> 1 </a></li>
+                            <li class="page-item">  <a class="page-link" href="#"> 2 </a>   </li>
+                            <li class="page-item">  <a class="page-link" href="#"> 3 </a>   </li>
+                            <li class="page-item">  <a class="page-link" href="#"> 3 </a>   </li>
+                            <li class="page-item">  <a class="page-link" href="#"> .. </a>  </li>
+                            <li class="page-item">  <a class="page-link" href="#"> 20 </a>  </li>
+                            <li class="page-item">  <a class="page-link" href="#"> <i class="icofont-thin-left"></i> </a>   </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+    <div class="side-bar">
+        <div class="side-box">
+            <div class="user-pic">
+                <img src="images/user.png"  class="img-fluid">
+            </div>
+            <h5 class="user-name"> Hossam Hilal </h5>
+
+            <a href="#" class="log-out"> <img src="images/power-icon.png"  class="img-fluid"> </a>
+
+            <div class="side-menue">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"> <img src="images/home-icon.png"  class="img-fluid"> </span>
+                            <label> الرئيسية  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menue.html">
+                            <span class="icon"> <img src="images/menu-icon.png"  class="img-fluid"> </span>
+                            <label> المنيو  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li  class="active">
+                        <a href="products.html">
+                            <span class="icon"> <img src="images/products-icon.png"  class="img-fluid"> </span>
+                            <label> المنتجات  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a  data-toggle="collapse" href="#orders-collpase" role="button" aria-expanded="false" aria-controls="orders-collpase">
+                            <span class="icon"> <img src="images/ordrs-icon.png"  class="img-fluid"> </span>
+                            <label> الطلبات  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse" id="orders-collpase">
+                            <div class="list">
+                                <a href="orders.html"> 
+                                    <span class="icon"> <img src="images/noun_Shop_1683178.png"  class="img-fluid"> </span>
+                                    <label>   الطلبات الواردة  </label>
+                                </a>
+                                <a href="active-orders.html"> 
+                                    <span class="icon"> <img src="images/truck.png"  class="img-fluid"> </span>
+                                    <label>  الطلبات النشطة </label>
+                                </a> 
+                                <a href="finished-orders.html">  
+                                    <span class="icon"> <img src="images/delivery-complete-copy.png"  class="img-fluid"> </span>
+                                    <label>   الطلبات المنتهية </label> 
+                                </a>
+                                <a href="orders-message.html">  
+                                    <span class="icon"> <img src="images/massage.png"  class="img-fluid"> </span>
+                                    <label>   رسائل الطلبات  </label> 
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a  data-toggle="collapse" href="#offers-collpase" role="button" aria-expanded="false" aria-controls="offers-collpase">
+                            <span class="icon"> <img src="images/add-offer-icon.png"  class="img-fluid"> </span>
+                            <label> العروض  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse" id="offers-collpase">
+                            <div class="list">
+                                <a href="add-offer.html"> 
+                                    <span class="icon"> <img src="images/offer-add.png"  class="img-fluid"> </span>
+                                    <label>  إضافة عرض  </label>
+                                </a>
+                                <a href="old-offers.html"> 
+                                    <span class="icon"> <img src="images/history.png"  class="img-fluid"> </span>
+                                    <label>    العروض السابقة  </label>
+                                </a> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#setting-collpase" role="button" aria-expanded="false" aria-controls="setting-collpase">
+                            <span class="icon"> <img src="images/setting-icon.png"  class="img-fluid"> </span>
+                            <label> الاعدادات <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse" id="setting-collpase">
+                            <div class="list">
+                                <a href="profile.html"> 
+                                    <span class="icon"> <img src="images/profile.png"  class="img-fluid"> </span>
+                                    <label>   الملف الشخصى   </label>
+                                </a>
+                                <a href="restaurant-info.html">  
+                                    <span class="icon"> <img src="images/information.png"  class="img-fluid"> </span>
+                                    <label>  معلومات المطعم   </label>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="comments.html">
+                            <span class="icon"> <img src="images/comments-icon.png"  class="img-fluid"> </span>
+                            <label> التعليقات و التقييمات <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade add-modal add-prod-modal" id="add-prod-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5> إضافة منتج  :  </h5>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="basic-table">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> الصورة </th>
+                                    <th scope="col"> اسم المنتج  </th>
+                                    <th scope="col"> السعر </th>
+                                    <th scope="col"> الخصم </th>
+                                    <th scope="col"> المنيو </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 
+                                        <div class="upload-box">
+                                            <input type='file' id="prod-newpic" class="profile-input-file">
+                                            <label for="prod-newpic"> <img class="camera" src="images/camera-upload.png">  </label>
+                                            <img class="profile-input-image img-fluid" src="images/snow-1.png" width="100%">  
+                                        </div>
+                                    </td>
+                                    <td> 
+                                        <div class="field">
+                                            <input type="text" id="prduct_name" class="form-control">
+                                            <label for="prduct_name">  اسم المنتج   </label>
+                                        </div>
+                                    </td>
+                                    <td> 
+                                        <div class="field">
+                                            <input type="text" id="prduct_price" class="form-control">
+                                            <label for="prduct_price">  السعر  </label>
+                                        </div> 
+                                    </td>
+                                    <td> 
+                                        <div class="field">
+                                            <input type="text" id="prod_discount" class="form-control">
+                                            <label for="prod_discount">  الخصم  </label>
+                                        </div> 
+                                    </td>
+                                    <td>  
+                                        <select>
+                                            <option value="0">  اسم المنيو </option>
+                                            <option value="1">  اسم المنيو </option>
+                                            <option value="2">  اسم المنيو </option>
+                                            <option value="3">  اسم المنيو </option>
+                                        </select>
+                                    </td>       
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-full" type="submit"> <span> إضافة </span>  </button>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/edit.js"></script>
+
+
+</body>
+</html>

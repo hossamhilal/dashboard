@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/log-logo.png" type="image/x-icon" />
+    <title> Dashboard </title>
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="loader-box">  </div>
+    </div>
+
+    <div class="login-page">
+        <div class="content">
+            <div class="log-box">
+                <form action="index.html">
+                    <div class="logo">
+                        <img src="images/log-logo.png" alt="logo" class="img-fluid">
+                    </div>
+
+                    <div class="field">
+                        <input type="text" id="phone" class="form-control">
+                        <label for="phone"> رقم الجوال </label>
+                        <span class="ico"> <i class="icofont-iphone"></i> </span>
+                    </div>
+                    <div class="field">
+                        <input type="password" id="password" class="form-control">
+                        <label for="password"> كلمة المرور </label>
+                        <span class="ico"> <i class="icofont-lock"></i> </span>
+                        <span class="eye" onclick="showpassword()"> <i class="icofont-eye"></i>  </span> 
+                    </div>
+
+                    <button class="btn btn-full" type="submit"> <span> دخول </span>  </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/edit.js"></script>
+
+
+</body>
+</html>

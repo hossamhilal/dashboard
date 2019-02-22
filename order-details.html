@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/icofont.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="css/style.css">
+    
+        <link rel="icon" href="images/log-logo.png" type="image/x-icon" />
+        <title> Dashboard </title>
+</head>
+
+<body>
+
+
+    <div class="loader">
+        <div class="loader-box">  </div>
+    </div>
+
+    
+    <div class="main-content">
+
+        <!--  MAIN HEADER -->
+        <header class="dashboard-header internal-header">
+            <div class="container-fluid">
+                <div class="top-header">
+                    <ul>
+                        <li>
+                            <div class="user-pic">
+                                <img src="images/user.png"  class="img-fluid">
+                            </div>
+                        </li>
+                        <li>
+                            <a href="profile.html"> <img src="images/setting-icon.png" alt="icon" class="img-fluid"> </a>
+                        </li>
+                        <li>
+                            <a href="orders.html">
+                                <img src="images/notification-icon.png" alt="icon" class="img-fluid">
+                                <div class="notifi-circle">
+                                    <span class="circle"></span>
+                                    <span class="bordr"></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="internal-bottom">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box first">
+                                <div class="pic">
+                                    <img src="images/internal-cart-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات الواردة </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box second">
+                                <div class="pic">
+                                    <img src="images/internal-delivery-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات النشطة </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box third">
+                                <div class="pic">
+                                    <img src="images/internal-finished-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات المنتهيه </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENT  -->
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <div class="internal-search">
+                    <form action="">
+                        <div class="search-box">
+                            <div class="field">
+                                <input type="text" id="serach-input"  class="form-control">
+                                <label for="serach-input">  كلمة البحث  </label>
+                            </div>
+                            <button type="submit" class="search-btn"> <i class="icofont-search-1"></i>  </button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="basic-table order-details-table">
+                    <table class="table table-bordered order-details">
+                        <thead>
+                            <tr>
+                                <th scope="col">  الصورة  </th>
+                                <th scope="col"> اسم المنتج </th>
+                                <th scope="col"> الكمية  </th>
+                                <th scope="col"> السعر </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 2  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                            </tr>
+                            <tr>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 2  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                            </tr>
+                            <tr>
+                                <td> <div class="prod-pic"> <img src="images/prod-1.png" class="img-fluid"></div> </td>
+                                <td> <p> سندوتش شاورما   </p> </td>
+                                <td> <p> 2  </p> </td>
+                                <td> <p> 20 ريال  </p> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-4">
+                            <div class="data-box">
+                                <p> <label> الخصم : </label>  0 ر.س </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="data-box">
+                                <p> <label> سعر التوصيل : </label>  0 ر.س </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <div class="data-box">
+                                <p> <label> السعر الاجمالى :  </label>  60 ر.س </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-status">
+                        <p>حالة الطلب  </p>
+                        <div class="input-collpse-box">
+                            <button class="btn btn-collapse" data-toggle="collapse" data-target="#status-collapse"  aria-expanded="false" aria-controls="status-collapse">
+                                <span>    تم استلام الطلب   </span>
+                                <i class="icofont-thin-down"></i>
+                            </button>
+                            <div class="collapse" id="status-collapse">
+                                <div class="card-box">
+                                    <label class="radio-container"> تجهيز الطلب
+                                        <input type="radio" name="radio" value=" تجهيز الطلب">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container"> الطلب فى الطريق  
+                                        <input type="radio" name="radio" value="الطلب فى الطريق  ">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container"> وصل طلبك بنجاح  
+                                        <input type="radio" name="radio" value="وصل طلبك بنجاح  ">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">  تم استلام الطلب 
+                                        <input type="radio" checked="checked" name="radio" value="  تم استلام الطلب ">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="pagination-box">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">  <a class="page-link" href="#"> <i class="icofont-thin-right"></i> </a>  </li>
+                            <li class="page-item">  <a class="page-link active" href="#"> 1 </a></li>
+                            <li class="page-item">  <a class="page-link" href="#"> 2 </a>   </li>
+                            <li class="page-item">  <a class="page-link" href="#"> 3 </a>   </li>
+                            <li class="page-item">  <a class="page-link" href="#"> 3 </a>   </li>
+                            <li class="page-item">  <a class="page-link" href="#"> .. </a>  </li>
+                            <li class="page-item">  <a class="page-link" href="#"> 20 </a>  </li>
+                            <li class="page-item">  <a class="page-link" href="#"> <i class="icofont-thin-left"></i> </a>   </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+    <div class="side-bar">
+        <div class="side-box">
+            <div class="user-pic">
+                <img src="images/user.png"  class="img-fluid">
+            </div>
+            <h5 class="user-name"> Hossam Hilal </h5>
+
+            <a href="#" class="log-out"> <img src="images/power-icon.png"  class="img-fluid"> </a>
+
+            <div class="side-menue">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"> <img src="images/home-icon.png"  class="img-fluid"> </span>
+                            <label> الرئيسية  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menue.html">
+                            <span class="icon"> <img src="images/menu-icon.png"  class="img-fluid"> </span>
+                            <label> المنيو  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            <span class="icon"> <img src="images/products-icon.png"  class="img-fluid"> </span>
+                            <label> المنتجات  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li  class="active">
+                        <a  data-toggle="collapse" href="#orders-collpase" role="button" aria-expanded="false" aria-controls="orders-collpase">
+                            <span class="icon"> <img src="images/ordrs-icon.png"  class="img-fluid"> </span>
+                            <label> الطلبات  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse show" id="orders-collpase">
+                            <div class="list">
+                                <a class="active" href="orders.html"> 
+                                    <span class="icon"> <img src="images/noun_Shop_1683178.png"  class="img-fluid"> </span>
+                                    <label>   الطلبات الواردة  </label>
+                                </a>
+                                <a href="active-orders.html"> 
+                                    <span class="icon"> <img src="images/truck.png"  class="img-fluid"> </span>
+                                    <label>  الطلبات النشطة </label>
+                                </a> 
+                                <a href="finished-orders.html">  
+                                    <span class="icon"> <img src="images/delivery-complete-copy.png"  class="img-fluid"> </span>
+                                    <label>   الطلبات المنتهية </label> 
+                                </a>
+                                <a href="orders-message.html">  
+                                        <span class="icon"> <img src="images/massage.png"  class="img-fluid"> </span>
+                                    <label>   رسائل الطلبات  </label> 
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a  data-toggle="collapse" href="#offers-collpase" role="button" aria-expanded="false" aria-controls="offers-collpase">
+                            <span class="icon"> <img src="images/add-offer-icon.png"  class="img-fluid"> </span>
+                            <label> العروض  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse" id="offers-collpase">
+                            <div class="list">
+                                <a href="add-offer.html"> 
+                                    <span class="icon"> <img src="images/offer-add.png"  class="img-fluid"> </span>
+                                    <label>  إضافة عرض  </label>
+                                </a>
+                                <a href="old-offers.html"> 
+                                    <span class="icon"> <img src="images/history.png"  class="img-fluid"> </span>
+                                    <label>    العروض السابقة  </label>
+                                </a> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#setting-collpase" role="button" aria-expanded="false" aria-controls="setting-collpase">
+                            <span class="icon"> <img src="images/setting-icon.png"  class="img-fluid"> </span>
+                            <label> الاعدادات <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse" id="setting-collpase">
+                            <div class="list">
+                                <a href="profile.html"> 
+                                    <span class="icon"> <img src="images/profile.png"  class="img-fluid"> </span>
+                                    <label>   الملف الشخصى   </label>
+                                </a>
+                                <a href="restaurant-info.html">  
+                                    <span class="icon"> <img src="images/information.png"  class="img-fluid"> </span>
+                                    <label>  معلومات المطعم   </label>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="comments.html">
+                            <span class="icon"> <img src="images/comments-icon.png"  class="img-fluid"> </span>
+                            <label> التعليقات و التقييمات <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/edit.js"></script>
+
+
+</body>
+</html>

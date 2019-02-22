@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/icofont.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="css/style.css">
+    
+        <link rel="icon" href="images/log-logo.png" type="image/x-icon" />
+        <title> Dashboard </title>
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="loader-box">  </div>
+    </div>
+
+    <div class="main-content">
+
+        <!--  MAIN HEADER -->
+        <header class="dashboard-header internal-header">
+            <div class="container-fluid">
+                <div class="top-header">
+                    <ul>
+                        <li>
+                            <div class="user-pic">
+                                <img src="images/user.png"  class="img-fluid">
+                            </div>
+                        </li>
+                        <li>
+                            <a href="profile.html"> <img src="images/setting-icon.png" alt="icon" class="img-fluid"> </a>
+                        </li>
+                        <li>
+                            <a href="orders.html">
+                                <img src="images/notification-icon.png" alt="icon" class="img-fluid">
+                                <div class="notifi-circle">
+                                    <span class="circle"></span>
+                                    <span class="bordr"></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="internal-bottom">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box first">
+                                <div class="pic">
+                                    <img src="images/internal-cart-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات الواردة </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box second">
+                                <div class="pic">
+                                    <img src="images/internal-delivery-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات النشطة </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="info-box third">
+                                <div class="pic">
+                                    <img src="images/internal-finished-icon.png" alt="icon" class="img-fluid">
+                                </div>
+                                <div class="data">
+                                    <h3> 200 </h3>
+                                    <p>  الطلبات المنتهيه </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENT  -->
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <div class="profile-wrapper">
+                    <form action="">
+                        <div class="upload-box">
+                            <input type='file' id="prod-newpic" class="profile-input-file">
+                            <label for="prod-newpic"> <img class="camera" src="images/photo-camera-white.png">  </label>
+                            <img class="profile-input-image img-fluid" src="images/user.png" width="100%">  
+                        </div>
+
+                        <label> اسم المستخدم : </label>
+                        <div class="setting-field"> 
+                            <input type="text" class="form-control" value="حسام هلال " readonly>
+                            <span class="edit-field"> <i class="icofont-pencil-alt-2"></i>  </span>
+                        </div>
+
+                        <label> كلمة المرور   : </label>
+                        <div class="setting-field"> 
+                            <input type="password" class="form-control" value="***********" readonly>
+                            <span class="edit-field"> <i class="icofont-pencil-alt-2"></i>  </span>
+                        </div>
+
+                        <button class="btn btn-full" type="submit"> <span> حفظ  </span>  </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="side-bar">
+        <div class="side-box">
+            <div class="user-pic">
+                <img src="images/user.png"  class="img-fluid">
+            </div>
+            <h5 class="user-name"> Hossam Hilal </h5>
+
+            <a href="#" class="log-out"> <img src="images/power-icon.png"  class="img-fluid"> </a>
+
+            <div class="side-menue">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"> <img src="images/home-icon.png"  class="img-fluid"> </span>
+                            <label> الرئيسية  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menue.html">
+                            <span class="icon"> <img src="images/menu-icon.png"  class="img-fluid"> </span>
+                            <label> المنيو  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            <span class="icon"> <img src="images/products-icon.png"  class="img-fluid"> </span>
+                            <label> المنتجات  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a  data-toggle="collapse" href="#orders-collpase" role="button" aria-expanded="false" aria-controls="orders-collpase">
+                            <span class="icon"> <img src="images/ordrs-icon.png"  class="img-fluid"> </span>
+                            <label> الطلبات  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse" id="orders-collpase">
+                            <div class="list">
+                                <a href="orders.html"> 
+                                    <span class="icon"> <img src="images/noun_Shop_1683178.png"  class="img-fluid"> </span>
+                                    <label>   الطلبات الواردة  </label>
+                                </a>
+                                <a href="active-orders.html"> 
+                                    <span class="icon"> <img src="images/truck.png"  class="img-fluid"> </span>
+                                    <label>  الطلبات النشطة </label>
+                                </a> 
+                                <a href="finished-orders.html">  
+                                    <span class="icon"> <img src="images/delivery-complete-copy.png"  class="img-fluid"> </span>
+                                    <label>   الطلبات المنتهية </label> 
+                                </a>
+                                <a href="orders-message.html">  
+                                    <span class="icon"> <img src="images/massage.png"  class="img-fluid"> </span>
+                                    <label>   رسائل الطلبات  </label> 
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a  data-toggle="collapse" href="#offers-collpase" role="button" aria-expanded="false" aria-controls="offers-collpase">
+                            <span class="icon"> <img src="images/add-offer-icon.png"  class="img-fluid"> </span>
+                            <label> العروض  <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse" id="offers-collpase">
+                            <div class="list">
+                                <a href="add-offer.html"> 
+                                    <span class="icon"> <img src="images/offer-add.png"  class="img-fluid"> </span>
+                                    <label>  إضافة عرض  </label>
+                                </a>
+                                <a href="old-offers.html"> 
+                                    <span class="icon"> <img src="images/history.png"  class="img-fluid"> </span>
+                                    <label>    العروض السابقة  </label>
+                                </a> 
+                            </div>
+                        </div>
+                    </li>
+                    <li   class="active">
+                        <a data-toggle="collapse" href="#setting-collpase" role="button" aria-expanded="false" aria-controls="setting-collpase">
+                            <span class="icon"> <img src="images/setting-icon.png"  class="img-fluid"> </span>
+                            <label> الاعدادات <i class="icofont-thin-left"></i> </label>
+                        </a>
+                        <div class="collapse show" id="setting-collpase">
+                            <div class="list">
+                                <a class="active" href="profile.html"> 
+                                    <span class="icon"> <img src="images/profile.png"  class="img-fluid"> </span>
+                                    <label>   الملف الشخصى   </label>
+                                </a>
+                                <a href="restaurant-info.html">  
+                                    <span class="icon"> <img src="images/information.png"  class="img-fluid"> </span>
+                                    <label>  معلومات المطعم   </label>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="comments.html">
+                            <span class="icon"> <img src="images/comments-icon.png"  class="img-fluid"> </span>
+                            <label> التعليقات و التقييمات <i class="icofont-thin-left"></i> </label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/edit.js"></script>
+
+
+</body>
+</html>
